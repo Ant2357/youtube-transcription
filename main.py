@@ -21,8 +21,7 @@ with YoutubeDL(ydl_opts) as ydl:
     ydl.download(youtube_urls)
 
 # 文字起こし
-result = model.transcribe("audio.mp3")
-print(result["text"])
+result = model.transcribe("audio.mp3", verbose=True)
 
 # 歌詞ファイルを出力する
 with open("output.txt", "w") as f:
