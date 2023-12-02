@@ -25,6 +25,6 @@ result = model.transcribe("audio.mp3", verbose=True)
 
 # 歌詞ファイルを出力する
 with open("output.txt", "w", encoding="utf-8") as f:
-    # 歌詞を出力(配列)
+    # 歌詞(配列)
     texts = list(map(lambda x: x["text"].strip(), result["segments"]))
     f.write("\n".join(texts))
